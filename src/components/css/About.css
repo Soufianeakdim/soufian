@@ -1,0 +1,166 @@
+.about-container {
+    width: 99%;
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+    background-color: var(--background-color);
+    flex-wrap: wrap;
+}
+
+.left-sec {
+    display: grid;
+    grid-template-columns: auto auto;
+    height: 500px;
+    width: 600px;
+    margin: auto;
+    justify-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.right-sec {
+    display: flex;
+    height: 500px;
+    max-width: 500px;
+    min-width: 200px;
+    margin: auto;
+    background-color: var(--color);
+    border: none;
+    border-radius: 5%;
+    flex-direction: column;
+}
+
+.right-sec h1 {
+    font-family: "Kanit";
+    display: flex;
+    align-self: center;
+}
+
+.right-sec p {
+    max-width: 400px;
+    font-weight: 300;
+    align-self: center;
+    font-size: medium;
+    padding: 30px;
+    margin: 0;
+}
+
+.left-sec div {
+    height: 250px;
+    width: 200px;
+    border-radius: 10%;
+    background-color: var(--color);
+}
+
+.l-grid {
+    display: grid;
+    justify-self: center;
+    align-self: center;
+    position: relative;
+    bottom: 0;
+    margin-top: 20px;
+    left: 100%;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto auto;
+
+}
+
+.whitep {
+    color: white;
+}
+
+.blackp {
+    color: black;
+}
+
+input {
+    width: 80px;
+    cursor: progress;
+    position: relative;
+}
+input[type=range]::-webkit-slider-thumb{
+    opacity: 0%;
+}
+input[type=range]::after{
+
+    content: attr(value)'%';
+    position: absolute;
+    left: 80%;
+    bottom: 100%;
+    color: var(--background-color);
+}
+.f-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    column-gap: 30px;
+}
+
+.s-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    column-gap: 30px;
+}
+@media (max-width: 480px) {
+    .about-container {
+        padding: 20px 10px;
+        width: 80%;
+        grid-template-columns: auto;
+        justify-content: center;
+        align-items: center;
+    }
+  
+    .left-sec, .right-sec {
+      width: 80%;
+    }
+    
+    .left-sec {
+        gap: 5px;
+    grid-template-columns: auto ;
+    }
+    .l-grid{
+        left: 0;
+        position: relative;
+        }    
+        .right-sec p {
+      width: 95%;
+      padding: 15px;
+      overflow-y: scroll;
+      }
+      }
+  @media (max-width: 768px) {
+    .about-container {
+      padding: 20px;
+      width: 90%;
+      gap: 350px;
+      grid-template-columns: auto; 
+    }
+  
+    .left-sec, .right-sec {
+      width: 90%;
+      max-width: none;
+      align-self: center;
+      justify-content: center;
+      }
+      
+    .left-sec {
+      gap: 10px;
+      grid-template-columns: auto ;
+      }
+      .l-grid{
+      position: relative;
+      left: auto;
+  }
+    .right-sec p {
+      width: 90%;
+      padding: 16px;       
+      overflow-y: scroll;
+    }
+  }
+  

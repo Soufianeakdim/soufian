@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"  
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/index.html",  
+      "dest": "/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/dist/$1" 
+    },
+    {
+      "src": "/contact", 
+      "dest": "server.mjs"
+    },
+    {
+      "src": "/(.*)", 
+      "dest": "server.mjs"
+    }
+  ]
+}
